@@ -1,4 +1,4 @@
-# 📱 Smartphone Project
+# Smartphone Project  📱 
 
 This project is part of the **DIO Fullstack Bootcamp** and a introduction to **C# object-oriented programming** concepts using a console application.
 
