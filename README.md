@@ -1,22 +1,50 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+# 📱 Smartphone Project
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+This project is part of the **DIO Fullstack Bootcamp** and a introduction to **C# object-oriented programming** concepts using a console application.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+## Description
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+The application simulates a **smartphone system** where different phone models can:
 
-![Diagrama classes](Imagens/diagrama.png)
+- Make outgoing calls
+- Receive incoming calls
+- Install applications
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+The project includes two smartphone models:
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+- **Nokia** – Represents a basic smartphone capable of making/receiving calls and installing apps.
+- **iPhone** – Represents a more advanced smartphone, also capable of making/receiving calls and installing apps.
+
+This project focuses on **classes, inheritance, abstract methods, and basic user input/output**.
+
+## How to Use
+
+1. Instantiate the phone objects:
+   ```csharp
+   Nokia nokia = new Nokia("123456789", "Nokia 3310", 32);
+   Iphone iphone = new Iphone("987654321", "iPhone 13", 128);
+
+2. Use the phone methods
+
+  nokia.Call();
+  nokia.IncomingCall();
+  nokia.InstallApp("WhatsApp");
+  
+  iphone.Call();
+  iphone.IncomingCall();
+  iphone.InstallApp("Instagram");
+
+  
+## Technologies Used
+
+- C#
+- .NET
+
+## Classes
+
+- **Smartphone (abstract)** – Base class with common properties (`Number`, `Model`, `Storage`) and methods (`Call()`, `IncomingCall()`, abstract `InstallApp()`).
+
+- **Nokia** – Inherits from `Smartphone` and implements `InstallApp()`.
+
+- **iPhone** – Inherits from `Smartphone` and implements `InstallApp()`.
+
